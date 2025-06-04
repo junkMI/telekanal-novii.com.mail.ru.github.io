@@ -5,212 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Телеканал Новый — Канал 634</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #000;
-      color: #00ffcc;
-      font-family: "Comic Sans MS", cursive, sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    header,
-    nav,
-    main,
-    footer {
-      position: relative;
-      z-index: 2;
-    }
-
-    header {
-      background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00);
-      text-align: center;
-      padding: 20px;
-      border-bottom: 5px dotted #ff0;
-      animation: hueRotate 5s linear infinite;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      color: #fff;
-      text-shadow: 0 0 10px #f0f, 0 0 20px #0ff, 0 0 30px #ff0;
-    }
-
-    header p {
-      color: #ffffff;
-      font-weight: bold;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0f0;
-    }
-
-    nav {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 10px;
-      border-bottom: 3px dashed #0ff;
-    }
-
-    nav a {
-      color: #ff0;
-      margin: 10px;
-      text-decoration: underline;
-      font-weight: bold;
-      text-shadow: 0 0 5px #f0f;
-      transition: transform 0.2s;
-    }
-
-    nav a:hover {
-      transform: scale(1.2);
-      color: #0ff;
-    }
-
-    main {
-      padding: 10px;
-    }
-
-    section {
-      background: rgba(0, 0, 0, 0.8);
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 960px;
-      border: 2px dashed #0f0;
-      box-shadow: 0 0 20px #00ffcc;
-      animation: borderPulse 2s infinite;
-    }
-
-    h2 {
-      color: #ff44ff;
-      text-shadow: 0 0 10px #ff0, 0 0 20px #f0f;
-      animation: pulse 2s infinite;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-      color: #ccff00;
-      text-shadow: 0 0 5px #fff;
-    }
-
-    .button {
+    .index_butbtn {
       display: inline-block;
-      padding: 10px 20px;
-      background: linear-gradient(45deg, #f0f, #0ff);
-      color: #000;
-      font-weight: bold;
-      border: 3px groove #00f;
-      text-decoration: none;
-      margin: 10px 0;
-      animation: blink 1s infinite;
-      box-shadow: 0 0 15px #fff;
-    }
-
-    footer {
-      background: #111;
-      color: #999;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      border-top: 3px dashed #f0f;
-    }
-
-    a {
-      color: #0ff;
-    }
-
-    @keyframes hueRotate {
-      0% {
-        filter: hue-rotate(0deg);
-      }
-
-      100% {
-        filter: hue-rotate(360deg);
-      }
-    }
-
-    @keyframes borderPulse {
-
-      0%,
-      100% {
-        box-shadow: 0 0 15px #0ff, 0 0 30px #ff0;
-      }
-
-      50% {
-        box-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffff;
-      }
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        text-shadow: 0 0 10px #ff0;
-      }
-
-      50% {
-        text-shadow: 0 0 20px #0ff;
-      }
-    }
-
-    @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0.5;
-      }
-    }
-
-    .tv-overlay {
-      pointer-events: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
-      background-size: cover;
-      opacity: 0.25;
-      mix-blend-mode: overlay;
-      z-index: 9999;
-    }
-
-    .scanlines {
-      pointer-events: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(to bottom,
-          rgba(255, 255, 255, 0.02),
-          rgba(255, 255, 255, 0.02) 1px,
-          transparent 1px,
-          transparent 3px);
-      mix-blend-mode: soft-light;
-      opacity: 0.2;
-      z-index: 9998;
-    }
-
-    body::before {
-      content: "";
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      box-sizing: border-box;
-      pointer-events: none;
-      z-index: 3;
+      margin-top: 10px;
+      margin-left: 30px;
     }
   </style>
 </head>
@@ -225,10 +25,10 @@
   </header>
 
   <nav>
-    <a href="#about">О канале</a>
+    <a href="index.html" class="active">Главная</a>
     <a href="#shows">Передачи</a>
     <a href="#gallery">Галерея</a>
-    <a href="#store">Магазин</a>
+    <a href="store.html">Магазин</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
@@ -254,7 +54,7 @@
           свой разрушающий обзор Яр с канала "Жизнь Яра". Результаты шокировали даже специалистов по специальным
           изделиям.</li>
       </ul>
-      <h2>Передачи в разработке</h2>
+      <h2>Скоро на Телеканале Новом!</h2>
       <ul>
         <li><strong>Культурный Головач</strong> – ???.</li>
       </ul>
@@ -268,7 +68,6 @@
 
     <section id="store">
       <h2>Магазин (настоящий)</h2>
-      <p>Вот наш фирменный мерч:</p>
       <ul>
         <li>Футболка «А монстры» — <em>распродана со страху до 2008 года</em></li>
         <li>Футболка «Котик котик» — <em>лучшая одежда на 14 февраля для всех милых парочек</em></li>
@@ -277,13 +76,13 @@
         <li>Футболка «Рецепт велосипедного подствольника» — <em>была добавленна по многочисленным просьбам в качестве
             расскрытия состава отечественного изобретения</em></li>
       </ul>
-      <a href="#" class="button">Купить (временно не работает. Потом сделаем короче)</a>
+      <a href="store.html" class="button index_butbtn">Купить</a>
     </section>
 
     <section id="contacts">
       <h2>Контакты</h2>
-      <p>📞 8-800-НО-НАС-РАЛ (звонок бесплатный, местный, но не факт, что ответят).</p>
-      <p>📧 тутПОЧТУвставим@pochta.ru Письма обещаем читать… спустя 5 лет.</p>
+      <p>📞 8-800-НО-НАС-РАЛ (звонок бесплатный, местный, но номер ненастоящий).</p>
+      <p>📧 тутПОЧТУвставим@pochta.ru (Может даже читать будем если реальный ящик укажем.)</p>
       <p>📡 г. Телеграмск, ул. Йобана, д. 634 (На 634 этаже стоит наше устройство по трансляции каналов).</p>
       <p><a href="https://www.youtube.com/@le_nasral" target="_blank">Наш YouTube</a></p>
     </section>
@@ -292,6 +91,8 @@
   <footer>
     © 2025 Телеканал Новый | Сделано
   </footer>
+  <button id="toggleEffectsBtn" style="margin-left: 20px; cursor: pointer;">Выключить шум</button>
+  <script src="main.js"></script>
 </body>
 
 </html>
