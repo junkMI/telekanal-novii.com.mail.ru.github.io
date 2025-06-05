@@ -46,6 +46,7 @@ header h1 {
 }
 
 header p {
+    font-size: 1.3em;
     color: #ffffff;
     font-weight: bold;
     text-shadow: 0 0 5px #0ff, 0 0 10px #0f0;
