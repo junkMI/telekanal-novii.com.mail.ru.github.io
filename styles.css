@@ -4,7 +4,10 @@
 }
 
 body {
-    background-color: #000;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
     color: #00ffcc;
     font-family: "Comic Sans MS", cursive, sans-serif;
     margin: 0;
@@ -30,7 +33,10 @@ h2 {
 
 /* HEADER */
 header {
-    background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00);
+    background-image: url(img/shapka.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     text-align: center;
     padding: 20px;
     border-bottom: 5px dotted #ff0;
