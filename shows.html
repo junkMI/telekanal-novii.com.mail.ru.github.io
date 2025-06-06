@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шоу | Телеканал Новый</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shows.css" />
+</head>
+
+<body>
+    <header>
+        <h1>🎥 Наши Шоу</h1>
+        <p>Канал 634 | Все видео — в одном месте! И даже не в жопе</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="shows.html" class="active">Передачи</a>
+        <a href="index.html#gallery">Галерея</a>
+        <a href="store.html">Магазин</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <div id="filters">
+            <button data-filter="all" class="filter-btn active">Все</button>
+            <button data-filter="эксперименты" class="filter-btn">Научные эксперименты и изобретения</button>
+            <button data-filter="лайфхаки" class="filter-btn">Лайфхаки на выживание</button>
+            <button data-filter="кухня" class="filter-btn">Кухонный Беспредел</button>
+            <button data-filter="хозяйство" class="filter-btn">Хозяйский Сабатон</button>
+        </div>
+
+        <div id="video-grid"></div>
+    </main>
+
+    <footer>
+        © 2025 Телеканал Новый | Сделано
+    </footer>
+
+    <!-- Модалка -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="tv-overlay"></div>
+    <div class="scanlines"></div>
+    <button id="toggleEffectsBtn" style="margin-left: 20px; cursor: pointer;">Выключить шум</button>
+
+    <script src="main.js"></script>
+    <script src="shows.js"></script>
+</body>
+
+</html>
