@@ -2,39 +2,26 @@ const products = [
     {
         title: "Футболка «А монстры»",
         desc: "Распродана со страху до 2008 года",
+        img: "img/monstri.jpg"
     },
     {
         title: "Футболка «Котик котик»",
         desc: "Лучшая одежда на 14 февраля для всех милых парочек",
+        img: "img/kotik.jpg"
     },
     {
         title: "Футболка «Кроссовки дексп»",
         desc: "Официальная футболочка творческого объединения «Кроссовки дексп»",
+        img: "img/dexp.jpg"
     },
     {
         title: "Футболка «Рецепт велосипедного подствольника»",
         desc: "По многочисленным просьбам раскрыт состав отечественного изобретения",
+        img: "img/velopodstvolnik.jpg"
     },
 ];
 
-const mobileProducts = [
-    {
-        title: "Футболка «А монстры»",
-        desc: "Распродана со страху до 2008 года",
-    },
-    {
-        title: "Футболка «Котик котик»",
-        desc: "Лучшая одежда на 14 февраля для всех милых парочек",
-    },
-    {
-        title: "Футболка «Кроссовки дексп»",
-        desc: "Официальная футболочка творческого объединения «Кроссовки дексп»",
-    },
-    {
-        title: "Футболка «Рецепт велосипедного подствольника»",
-        desc: "По многочисленным просьбам раскрыт состав отечественного изобретения",
-    },
-];
+const mobileProducts = [...products]; // можно использовать те же объекты
 
 const sliderTrack = document.getElementById("sliderTrack");
 const prevBtn = document.getElementById("prevBtn");
@@ -63,7 +50,9 @@ function renderProducts() {
         const card = document.createElement("div");
         card.className = "product";
         card.innerHTML = `
-            <div class="product-img">[ Фото футболки ]</div>
+            <div class="product-img">
+                <img src="${product.img}" alt="${product.title}" style="max-width: 100%; max-height: 100%; object-fit: cover;" />
+            </div>
             <h3>${product.title}</h3>
             <p>${product.desc}</p>
             <button class="buy-button" onclick="openForm()">Заказать прямо сейчас!</button>
@@ -93,7 +82,7 @@ function moveSlide(direction) {
 prevBtn.addEventListener("click", () => moveSlide(-1));
 nextBtn.addEventListener("click", () => moveSlide(1));
 
-// Адаптив: сброс текущего индекса при изменении размера экрана
+// Адаптив
 let lastIsMobile = window.innerWidth <= 768;
 window.addEventListener("resize", () => {
     const isMobile = window.innerWidth <= 768;
@@ -116,4 +105,14 @@ function closeForm() {
     document.getElementById("buyFormBackdrop").style.display = "none";
 }
 
-renderProducts();
+function submitForm() {
+    document.getElementById("thanksModal").style.display = "flex";
+
+    closeForm();
+    const inputs = document.querySelectorAll('.buy-form input');
+    inputs.forEach(input => input.value = "");
+}
+
+function closeThanks() {
+    document.getElementById("thanksModal").style.display = "none";
+}

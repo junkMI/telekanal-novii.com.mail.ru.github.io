@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Магазин | Телеканал Новый</title>
-    <link rel="stylesheet" href="store.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="store.css" />
 </head>
-
 <body>
     <div class="tv-overlay"></div>
     <div class="scanlines"></div>
@@ -21,7 +19,6 @@
         <p>Канал 634 | Самый честный магазин интернета</p>
     </header>
 
-
     <nav>
         <a href="index.html">Главная</a>
         <a href="shows.html">Передачи</a>
@@ -31,39 +28,36 @@
     </nav>
 
     <main>
-        <h2>Наш фирменный мерч</h2>
-
-        <div class="slider">
-
-            <div class="slider-track" id="sliderTrack"></div>
-            <div class="slider-buttons">
-                <button class="slider-button" id="prevBtn">←</button>
-                <button class="slider-button" id="nextBtn">→</button>
+        <section>
+            <h2>Наш фирменный мерч</h2>
+            <div class="slider">
+                <div class="slider-track" id="sliderTrack"></div>
+                <div class="slider-buttons">
+                    <button class="slider-button" id="prevBtn">←</button>
+                    <button class="slider-button" id="nextBtn">→</button>
+                </div>
             </div>
-        </div>
-
+        </section>
     </main>
 
     <footer>
         © 2025 Телеканал Новый | Сделано
     </footer>
 
-    <!-- Шуточная форма покупки -->
     <div class="buy-form-backdrop" id="buyFormBackdrop">
         <div class="buy-form">
             <h3>Оформить мокрого</h3>
             <p>Внесите данные блин</p>
             <input type="text" placeholder="Имя, как вы его чувствуете" />
             <input type="text" placeholder="Номер чевонить" />
-            <button onclick="closeForm()">Заказать</button>
+            <button onclick="submitForm()">Заказать</button>
             <button onclick="closeForm()">Закрыть</button>
         </div>
-
     </div>
+
     <button id="toggleEffectsBtn" style="margin-left: 20px; cursor: pointer;">Выключить шум</button>
 
     <script src="store.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>
